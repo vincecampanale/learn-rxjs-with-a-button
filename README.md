@@ -1,8 +1,8 @@
-![image](https://cloud.githubusercontent.com/assets/1544557/19449642/44435154-945b-11e6-889e-40e8896e3f12.png)
-
 # Learn RxJS with a Button
 
 A simple introduction to the fundamentals of RxJS. 
+
+Huge shoutout to Lukas Reubellke -- this repo builds on his first example in [this talk](https://www.youtube.com/watch?v=5CTL7aqSvJU). 
 
 ## Prerequisites
 * You will need to have NodeJS and NPM installed from [nodejs.org](https://nodejs.org)
