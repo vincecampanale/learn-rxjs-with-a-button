@@ -1,5 +1,5 @@
 {
-  "name": "hello-rxjs",
+  "name": "learn-rxjs-with-a-button",
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
@@ -10,7 +10,7 @@
     "pree2e": "webdriver-manager update",
     "e2e": "protractor"
   },
-  "private": true,
+   "private": true,
   "dependencies": {
     "@angular/common": "2.0.0",
     "@angular/compiler": "2.0.0",
@@ -32,8 +32,8 @@
     "zone.js": "^0.6.23"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.6",
-    "@types/jasmine": "2.5.38",
+    "@types/jasmine": "^2.2.30",
+    "angular-cli": "1.0.0-beta.15",
     "codelyzer": "~0.0.26",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
