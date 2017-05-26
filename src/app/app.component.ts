@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     const rxBtn = this.getNativeElement(this.btn);
     const clickStream = Observable.fromEvent(this.getNativeElement(this.btn), 'click');
-
+    
       
   }
 
