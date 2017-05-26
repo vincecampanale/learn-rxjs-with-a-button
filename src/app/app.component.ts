@@ -3,11 +3,12 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import 'rxjs/add/observable/fromEvent';
+import 'rxjs/add/observable/timer';
+
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/buffer';
-import 'rxjs/add/observable/timer';
 
 
 @Component({
@@ -30,7 +31,10 @@ export class AppComponent implements OnInit {
   message: string;
 
   ngOnInit() {
+    const rxBtn = this.getNativeElement(this.btn);
     const clickStream = Observable.fromEvent(this.getNativeElement(this.btn), 'click');
+
+      
   }
 
   getNativeElement(element) {
