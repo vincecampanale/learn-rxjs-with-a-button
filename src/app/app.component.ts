@@ -30,9 +30,6 @@ export class AppComponent implements OnInit {
   message: string;
 
   ngOnInit() {
-
-
-
     
   }
 
