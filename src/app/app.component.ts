@@ -30,10 +30,9 @@ export class AppComponent implements OnInit {
   message: string;
 
   ngOnInit() {
-    let clickStream = Observable.fromEvent(this.getNativeElement(this.btn), 'click');
-
-
-    
+    /**
+     * Code goes here :)
+     */
   }
 
   getNativeElement(element) {
