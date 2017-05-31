@@ -38,9 +38,11 @@ export class AppComponent implements OnInit {
 
     const debounced$ = click$.debounceTime(250);
     const buffered$ = click$.buffer(debounced$);
-    
+
     const clickCount$ = buffered$.map(getLength);
-    clickCount$.subscribe(console.log);
+    const doubleClick$ = clickCount$.filter(x => x === 2);
+
+    
   }
 
   getNativeElement(element) {
