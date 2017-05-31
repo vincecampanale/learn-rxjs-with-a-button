@@ -32,12 +32,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     const rxBtn = this.getNativeElement(this.btn);
-    const click$ = Observable.fromEvent(this.getNativeElement(this.btn), 'click');
+    const click$ = Observable.fromEvent(rxBtn, 'click');
 
-    const debouncedClicks$ = click$.debounceTime(250);
-
-    click$.buffer(debouncedClicks$).subscribe(val => console.log(val));
-      
+    const debounced$ = click$.debounceTime(250);
+    const buffered$ = click$.buffer(debounced$);
   }
 
   getNativeElement(element) {
