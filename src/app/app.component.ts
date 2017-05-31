@@ -31,11 +31,16 @@ export class AppComponent implements OnInit {
   message: string;
 
   ngOnInit() {
+    const getLength = a => a.length;
+
     const rxBtn = this.getNativeElement(this.btn);
     const click$ = Observable.fromEvent(rxBtn, 'click');
 
     const debounced$ = click$.debounceTime(250);
     const buffered$ = click$.buffer(debounced$);
+    
+    const clickCount$ = buffered$.map(getLength);
+    clickCount$.subscribe(console.log);
   }
 
   getNativeElement(element) {
