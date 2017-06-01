@@ -53,6 +53,21 @@ export class AppComponent implements OnInit {
       .filter(x => x === 2)
       .subscribe(e => this.message = "Double click!");
     */
+
+    /* 
+    Bonus Challenge 1 Solution: 
+
+    */
+
+    /*
+    Bonus Challenge 2 Solution: 
+
+    const shiftClick$ = click$
+      .filter( event: KeyboardEvent => event.shiftKey )
+      .map( event => '~ Shift Clicked ~' );
+    
+    shiftClick$.subscribe( m => this.message = m );
+    */
   }
 
   getNativeElement(element) {
