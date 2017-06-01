@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
   message: string;
 
   ngOnInit() {
-    const getLength = a => a.length;
+    const toLength = a => a.length;
 
     const rxBtn = this.getNativeElement(this.btn);
     const click$ = Observable.fromEvent(rxBtn, 'click');
@@ -39,10 +39,24 @@ export class AppComponent implements OnInit {
     const debounced$ = click$.debounceTime(250);
     const buffered$ = click$.buffer(debounced$);
 
-    const clickCount$ = buffered$.map(getLength);
+    const clickCount$ = buffered$.map(toLength);
     const doubleClick$ = clickCount$.filter(x => x === 2);
 
+    doubleClick$.subscribe(event => this.message = "Double click!");
+
+    /*
+    Using method chaining and composition:
     
+    click$
+      .buffer(click$.debounceTime(250))
+      .map(a => a.length)
+      .filter(x => x === 2)
+      .subscribe(e => this.message = "Double click!");
+    */
+
+    /*
+
+    */
   }
 
   getNativeElement(element) {
