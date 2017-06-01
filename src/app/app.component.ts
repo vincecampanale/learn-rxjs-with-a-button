@@ -53,10 +53,6 @@ export class AppComponent implements OnInit {
       .filter(x => x === 2)
       .subscribe(e => this.message = "Double click!");
     */
-
-    /*
-
-    */
   }
 
   getNativeElement(element) {
