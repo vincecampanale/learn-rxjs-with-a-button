@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
     const clickCount$ = buffered$.map(toLength);
     const doubleClick$ = clickCount$.filter(x => x === 2);
 
-    doubleClick$.subscribe(event => this.message = "Double click!");
+    doubleClick$.subscribe(event => this.message = 'Double click!');
 
     /*
     Using method chaining and composition:
@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
       .buffer(click$.debounceTime(250))
       .map(a => a.length)
       .filter(x => x === 2)
-      .subscribe(e => this.message = "Double click!");
+      .subscribe(e => this.message = 'Double click!');
     */
   }
 
