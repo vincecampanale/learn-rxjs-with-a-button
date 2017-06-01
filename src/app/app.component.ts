@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
     //   .buffer(click$.debounceTime(250))
     //   .map(a => a.length)
     //   .filter(x => x === 2)
-    //   .subscribe(e => this.message = "Double click!");
+    //   .subscribe(e => this.message = 'Double click!');
     
      
     // // Bonus Challenge 1 Solution: 
@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
     //     .filter(x => x === clickCount)
     //     .map(e => '');
 
-    // filterClickCount$(click$)(3).subscribe(e => this.message = "Triple clicked!!!");
+    // filterClickCount$(click$)(3).subscribe(e => this.message = 'Triple clicked!!!');
   }
 
   getNativeElement(element) {
